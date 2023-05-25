@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * get_line - Read input from the stream
