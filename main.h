@@ -200,10 +200,4 @@ void aux_help_cd(void);
 
 int get_help(data_shell *datash);
 
-/* toem_shloop.c */
-int hsh(info_t *, char **);
-int find_builtin(info_t *);
-void find_cmd(info_t *);
-void fork_cmd(info_t *);
-
 #endif
