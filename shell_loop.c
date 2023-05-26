@@ -1,33 +1,33 @@
 #include "main.h"
 
 /**
- * without_comment - Deletes comments from the input
- * @in: Input string
- * Return: Input without comments
+ * without_comment - deletes comments from the input
+ * @in: input string
+ * Return: input without comments
  */
 char *without_comment(char *in)
 {
-	int j, up_to;
+	int i, up_to;
 
 	up_to = 0;
-	for (j = 0; in[j]; j++)
+	for (i = 0; in[i]; i++)
 	{
-		if (in[j] == '#')
+		if (in[i] == '#')
 		{
-			if (j == 0)
+			if (i == 0)
 			{
 				free(in);
 				return (NULL);
 			}
 
-			if (in[j - 1] == ' ' || in[j - 1] == '\t' || in[j - 1] == ';')
-				up_to = j;
+			if (in[i - 1] == ' ' || in[i - 1] == '\t' || in[i - 1] == ';')
+				up_to = i;
 		}
 	}
 
 	if (up_to != 0)
 	{
-		in = _realloc(in, j, up_to + 1);
+		in = _realloc(in, i, up_to + 1);
 		in[up_to] = '\0';
 	}
 
@@ -35,7 +35,7 @@ char *without_comment(char *in)
 }
 
 /**
- * shell_loop - Loop of shells
+ * shell_loop - Loop of shell
  * @datash: data relevant (av, input, args)
  * Return: no return.
  */
